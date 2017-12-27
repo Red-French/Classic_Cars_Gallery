@@ -1,7 +1,29 @@
+body {
+  font-size: 10px;
+}
+a {
+  text-decoration: none;
+}
 ul > li {
   list-style-type: none;
 }
 .carImage {
+  display: block;
   width: 25%;
+  height: auto;
+}
+.thumbnail-item + .thumbnail-item {  /* all list items except first */
+  margin-top: 10px;
+}
+.thumbnail-title {
+  display: block;
+  padding: 4px 10px;
+  font-size: 1.8em;
+
+  background: rgb(96, 125, 139);
+  color: rgb(202, 238, 255);
+}
+.detail-image {
+  width: 90%;
   height: auto;
 }
