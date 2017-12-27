@@ -1,6 +1,12 @@
+html, body {
+  height: 100%;
+}
 body {
+  display: flex;
+  flex-direction: column;
   font-size: 10px;
 }
+
 a {
   text-decoration: none;
 }
@@ -11,10 +17,18 @@ ul {
 ul > li {
   list-style-type: none;
 }
+.main-header {
+  flex: 0 1 auto;
+  margin: 0 auto;
+}
+.main-content {
+  flex: 1 1 auto;
+}
 .carImage {
   display: block;
   width: 100%;
   height: auto;
+  max-height: 205px;
 }
 .thumbnail-item {
   display: inline-block;
