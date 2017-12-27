@@ -1,0 +1,7 @@
+ul > li {
+  list-style-type: none;
+}
+.carImage {
+  width: 25%;
+  height: auto;
+}
