@@ -6,23 +6,38 @@ body {
   flex-direction: column;
   font-size: 10px;
 }
+article {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
 
+.heading {
+  color: rgb(50, 0, 220);
+  font-family: 'Ranga', cursive;
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 1.5rem 0 0 0;
+  text-align: center;
+}
 a {
   text-decoration: none;
 }
-ul {
-  white-space: nowrap;
-  overflow-x: auto;
-}
+
 ul > li {
   list-style-type: none;
 }
 .main-header {
   flex: 0 1 auto;
   margin: 0 auto;
+  width: 100%;
 }
 .main-content {
   flex: 1 1 auto;
+}
+
+.autoList {
+  /* margin: 0 0 0 0; */
+  padding-bottom: .25rem;
 }
 .carImage {
   display: block;
@@ -30,22 +45,82 @@ ul > li {
   height: auto;
   max-height: 205px;
 }
-.thumbnail-item {
-  display: inline-block;
-  width: 24%;
+.detail-image-container {
+  text-align: center;
 }
-.thumbnail-item + .thumbnail-item {  /* all list items except first */
-  margin-top: 10px;
+.detail-image-title {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 750;
+}
+.detail-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
 }
 .thumbnail-title {
   display: block;
   padding: 4px 10px;
-  font-size: 1.8em;
+  font-size: 1.3rem;
 
   background: rgb(96, 125, 139);
   color: rgb(202, 238, 255);
 }
-.detail-image {
-  width: 90%;
-  height: auto;
+
+@media screen and (min-width: 350px) {
+  ul {
+    white-space: nowrap;  /* set list to horizontal */
+    overflow-x: auto;  /* set scroll */
+    margin-left: -35px;
+    width: 100%;
+  }
+  .thumbnail-item + .thumbnail-item {  /* all list items except first */
+    margin-top: 10px;
+  }
+  .thumbnail-item {
+    display: inline-block;
+    width: 33%;
+  }
 }
+
+@media screen and (min-width: 825px) {
+  .autoSummary {
+    grid-column: 1 / span 2;
+  }
+  ul {
+    white-space: pre-line;
+    overflow-y: auto;
+    width: 375%;
+    height: 350px;
+    top: 0;
+    bottom: 0;
+  }
+  .main-content {
+    display: grid;
+    grid-template-columns: 66% 34%;
+    grid-template-areas:
+        "detail-image-container autoList"
+        "autoSummary";
+    /* grid-template-rows: ; */
+    /* grid-auto-rows: 100px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+  }
+  .thumbnail-item {
+    margin-top: 0;
+    width: 20%;
+  }
+  
+
+  /* @media screen and (max-width: 580px) {
+    article {
+      margin: 2rem;
+      font-size: 1.5rem;
+    } */
+  /* @media screen and (min-width: 800px) {
+    article {
+      margin: 2rem;
+      font-size: 1.5rem;
+    } */
+  }
+
