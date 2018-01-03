@@ -36,7 +36,6 @@ ul > li {
 }
 
 .autoList {
-  /* margin: 0 0 0 0; */
   padding-bottom: .25rem;
 }
 .carImage {
@@ -84,16 +83,22 @@ ul > li {
 }
 
 @media screen and (min-width: 825px) {
+  .autoList {
+    /* margin: 0 0 0 0; */
+    
+  }
   .autoSummary {
     grid-column: 1 / span 2;
+  }
+  .carImage {
+    display: inline-block;
   }
   ul {
     white-space: pre-line;
     overflow-y: auto;
     width: 375%;
     height: 350px;
-    top: 0;
-    bottom: 0;
+    margin-top: 0rem;
   }
   .main-content {
     display: grid;
@@ -107,9 +112,39 @@ ul > li {
     grid-row-gap: 10px; */
   }
   .thumbnail-item {
-    margin-top: 0;
+    margin-top: -2rem;
     width: 20%;
   }
+
+  .thumbnail-item + .thumbnail-item {  /* all list items except first */
+    margin-top: -2rem;
+  }
+
+  .thumbnail-title {
+    /* display: block;
+    padding: 4px 10px;
+    font-size: 1.3rem; */
+    margin-top: 0;
+  }
+}
+
+  @media screen and (min-width: 850px) {
+    ul {
+      height: 370px;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    ul {
+      height: 390px;
+    }
+  }
+
+  /* @media screen and (min-width: 880px) {
+    ul {
+      height: 11.5%;
+    }
+  } */
   
 
   /* @media screen and (max-width: 580px) {
@@ -122,5 +157,4 @@ ul > li {
       margin: 2rem;
       font-size: 1.5rem;
     } */
-  }
 
