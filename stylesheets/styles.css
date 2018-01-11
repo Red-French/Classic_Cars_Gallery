@@ -57,6 +57,11 @@ ul > li {
   height: auto;
   max-width: 600px;
 }
+.intro {
+  font-size: 2rem;
+  margin-top: 2rem;
+  padding: 2rem;
+}
 .thumbnail-title {
   display: block;
   padding: 4px 10px;
