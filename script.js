@@ -8,28 +8,25 @@ $( document ).ready(function() {
   }
 
   function handleCarSelectionClick(event) {
-    let chosenPic = event.srcElement.name + ".jpg";;
-    let chosenPicLocation = './img/' + chosenPic;
-    let carMakeCaption = event.target.alt;
-    let intro = $(".intro");
+    const autoClicked = event.srcElement.name;
+    const chosenPic = './img/' + autoClicked + ".jpg";
+    const chosenAutoHistory = './partials/' + autoClicked + ".html";
+
+    const carMakeCaption = event.target.alt;
+    const intro = $(".intro");
 
     if(intro) {intro.remove();};  // remove intro text
 
-    // load chosen pic/caption
-    $(".detail-image").attr("src", chosenPicLocation);
+    // load chosen auto's pic, caption and history in DOM
+    $(".detail-image").attr("src", chosenPic);
     $(".detail-image-title").html(carMakeCaption);
+    console.log(chosenAutoHistory);
+    $(".autoSummary").load(chosenAutoHistory);
   }
 
   // WITHOUT EVENT LISTENERS
   // $("a").click(function(event) {
-  //   let chosenPic = event.target.name + ".jpg"
-  //   let chosenPicLocation = './img/' + chosenPic;
-  //   let carMakeCaption = event.target.alt;
-  //   let intro = document.getElementsByClassName('intro')[0];
-
-  //   if(intro) {intro.remove();};
-    
-  //   document.getElementsByClassName('detail-image')[0].src = chosenPicLocation;
+  //   document.getElementsByClassName('detail-image')[0].src = chosenPic;
   //   document.getElementsByClassName('detail-image-title')[0].innerHTML = carMakeCaption;
   // });
 
